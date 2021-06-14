@@ -6,6 +6,7 @@ namespace Neon
 {
     public static class NumerosPares
     {
+        // Escreva um algoritmo que dada uma lista de números inteiros, retorne a soma dos menores números pares.
         public static void Executar()
         {
             Console.WriteLine("--------------------------------------------------");
@@ -13,14 +14,25 @@ namespace Neon
             Console.WriteLine("--------------------------------------------------");
             Console.WriteLine("");
 
-            // Escreva um algoritmo que dada uma lista de números inteiros, retorne a soma dos menores números pares.
             var numeros = new List<int> { 7, 1, 6, 2, 5, 9, 4, 3 };
-            var pares = numeros.Where(x => x % 2 == 0).OrderBy(x => x).ToList();
-            var numero1 = pares[0];
-            var numero2 = pares[1];
-            var soma = numero1 + numero2;
 
-            Console.WriteLine(soma);
+            Console.Write("Números: ");
+            foreach (var numero in numeros)
+            {
+                if(numeros.IndexOf(numero) > 0)
+                    Console.Write(" | ");
+
+                Console.Write(numero);
+            }
+
+            var pares = numeros.Where(x => x % 2 == 0).OrderBy(x => x).ToList();
+            var par1 = pares[0];
+            var par2 = pares[1];
+            var soma = par1 + par2;
+
+            Console.WriteLine("");
+            Console.WriteLine($"Menores pares: {par1} e {par2}");
+            Console.WriteLine($"Soma: {soma}");
 
             Console.WriteLine("");
             Console.WriteLine("--------------------------------------------------");
