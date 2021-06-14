@@ -11,7 +11,8 @@ namespace Neon
             Console.WriteLine("--------------------------------------------------");
             Console.WriteLine("Teste 1 - Soma dos menores números pares");
             Console.WriteLine("--------------------------------------------------");
-            
+            Console.WriteLine("");
+
             // Escreva um algoritmo que dada uma lista de números inteiros, retorne a soma dos menores números pares.
             var numeros = new List<int> { 7, 1, 6, 2, 5, 9, 4, 3 };
             var pares = numeros.Where(x => x % 2 == 0).OrderBy(x => x).ToList();
@@ -21,6 +22,7 @@ namespace Neon
 
             Console.WriteLine(soma);
 
+            Console.WriteLine("");
             Console.WriteLine("--------------------------------------------------");
             Console.WriteLine("");
         }
